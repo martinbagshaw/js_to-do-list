@@ -1,0 +1,264 @@
+/*
+$red : #e74e42;
+$green : #70bf44;
+$white : #ffffff;
+$grey : #f5f5f5;
+$black : #000000;
+*/
+
+/* body and text styles */
+body {
+  font-family: 'Signika', Helvetica, Arial, sans-serif;
+  font-size: 16px / 1em;
+  font-weight : 400;
+  line-height: 1.4;
+  color: grey;
+  background-image : url('../img/what-the-hex.png');
+}
+
+h1 {
+  font-size : 2rem;
+  font-weight : 600;
+  line-height : 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #e74e42;
+}
+
+.hidden {
+  visibility : hidden;
+  height : 0;
+}
+
+/* general spacing */
+section,
+.fieldset {
+  max-width: 1000px;
+  width : 100%;
+  margin : 0 auto;
+  padding : 0 1rem;
+  box-sizing: border-box;
+}
+
+/* general buttons */
+button {
+  margin-left : .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  color: black;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+
+
+/* - - - - - - - - - - - - - - */
+/* header */
+header {
+  position : fixed;
+  left : 0;
+  top : 0;
+  right : 0;
+  height : 10vh;
+  background-color : #9cd37d;
+  color : white;
+}
+header section {
+  height : 100%;
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+}
+
+/* sort button and container */
+#sort-container {
+  display : flex;
+  justify-content : flex-end;
+  align-items : center;
+}
+#sort-container label {
+  margin-left : .5rem;
+}
+#sort-container button {
+  background-image: linear-gradient(#599b35, #70bf44);
+  color : white;
+}
+#sort-container button.reverse {
+  background-image: linear-gradient(#70bf44, #599b35);
+}
+/*
+#c8e6b6 lighter
+#9cd37d light
+#70bf44 orig
+#599b35 dark
+*/
+
+
+
+/* - - - - - - - - - - - - - - */
+/* to do list */
+section[role="main"] {
+  margin-top : 10vh;
+}
+#todo-container {
+  max-height : 70vh;
+  padding : 1rem 0;
+  box-sizing : border-box;
+  overflow-y : scroll;
+}
+
+
+/* list items */
+li {
+  margin-top : 1rem;
+  padding: 1rem;
+  background-color : white;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  border : 2px solid grey;
+  display : flex;
+  justify-content: space-between;
+  align-items : center;
+}
+li:first-child{
+  margin-top : 0;
+}
+li span {
+  font-size : 1.25rem;
+  flex : 8;
+}
+li button {
+  flex : 1;
+}
+/* button styles */
+li button.mark {
+  background: #70bf44; 
+  color: white;
+}
+li button.delete {
+  font-weight: bold;
+  background: #e74e42;
+  color : white;
+}
+/* button states */
+li.checked-off {
+  background: gainsboro;
+  border-color: grey;
+  color: grey;
+}
+li.checked-off span {
+  text-decoration : line-through;
+}
+li button.mark.checked-off {
+  background: grey;
+}
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - */
+/* form */
+form {
+  position : fixed;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  /* height : 20vh; */
+  background-color : #f5f5f5;
+  border-top : 2px solid grey;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+/* fieldset element does not regard flex display!!! */
+.fieldset {
+  display : flex;
+  flex-direction : row;
+  justify-content : space-between;
+  align-items : flex-end;
+}
+.fieldset > div:nth-child(1) {
+  flex : 5;
+}
+.fieldset > div:nth-child(2) {
+  flex : 1;
+  margin-left : 1rem;
+}
+
+
+
+
+form input,
+form label {
+  display: block;
+}
+form label {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: grey;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+/* text field and submit button */
+form input {
+  font-family: 'Signika', Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  width: 100%;
+  display: block;
+  padding: 0.9rem 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border : 1px solid grey;
+}
+form input[type="text"]:focus,
+form input[type="text"]:active {
+  border: 1px solid #e74e42;
+}
+
+
+/* submit button */
+form input[type="submit"] {
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  background-color: #70bf44;
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  background: #e74e42;
+}
+
+
+
+
+
+/* mid to large screen stuff */
+@media only screen and (min-width: 600px) {
+
+  /* section,
+  #sort-container,
+  #todo-container,
+  form {
+    max-width: 80%;
+    margin: 0 auto 2rem;
+  }
+  #sort-container {
+    margin-bottom : 1rem;
+  } */
+}
+  
+
+  
