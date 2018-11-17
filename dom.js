@@ -2,7 +2,7 @@
 // keep everything hidden from rest of app with an IIFE
 (function() {
     // This is the dom node where we will keep our todo
-    const container = document.getElementById('todo-container');
+    const container = document.querySelector('.todo-container');
     const addTodoForm = document.getElementById('add-todo');
   
     let stateDefault = [

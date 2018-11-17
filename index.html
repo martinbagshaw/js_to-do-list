@@ -15,31 +15,32 @@
 <body>
   <main>
 
-    <header>
-      <section>
+    <header role="banner">
+      <section class="main">
         <h1>To do:</h1>
-        <div id="sort-container">
+        <section class="sort-container">
+          <h2 class="hidden">Sort Items A to Z or by order entered</h2>
           <label for="sort-a-to-z">A to Z</label>
-          <button id="sort-a-to-z" class="sort" aria-label="sort button">&#8597;</button>
+          <button id="sort-a-to-z" class="sort" aria-label="sort button">↕</button>
           <label for="sort-0-to-9">0 to 9</label>
-          <button id="sort-0-to-9" class="sort" aria-label="sort button">&#8597;</button>
-        </div>
+          <button id="sort-0-to-9" class="sort" aria-label="sort button">↕</button>
+        </section>
       </section>
     </header>
 
-    <section role="main">
-      <h2 class="hidden">My To do list:</h2>
-      <div id="todo-container"><ul></ul></div>
+    <section class="main" role="main">
+      <h3 class="hidden">My To do list:</h3>
+      <div class="todo-container"><ul></ul></div>
     </section>
 
     <form id="add-todo" autocomplete="off">
       <div class="fieldset">
         <div>
-          <label for="to-do-item">To Do Item:</label>
-          <input id="to-do-item" type="text" name="description" value="" placeholder="add to do list item here...">
+          <label for="to-do-item" aria-label="To Do Item" class="hidden">To Do Item:</label>
+          <input id="to-do-item" type="text" name="description" value="" placeholder="add to do list item here..." class="text">
         </div>
         <div>
-            <input type="submit" name="submit" value="Submit">
+          <input type="submit" name="submit" value="Submit" class="submit">
         </div>
       </div>
     </form>

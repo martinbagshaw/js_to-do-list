@@ -4,6 +4,11 @@ $green : #70bf44;
 $white : #ffffff;
 $grey : #f5f5f5;
 $black : #000000;
+// greens
+#c8e6b6 lighter
+#9cd37d light
+#70bf44 orig
+#599b35 dark
 */
 
 /* body and text styles */
@@ -30,10 +35,11 @@ a {
 .hidden {
   visibility : hidden;
   height : 0;
+  padding : 0;
 }
 
 /* general spacing */
-section,
+.main,
 .fieldset {
   max-width: 1000px;
   width : 100%;
@@ -67,7 +73,7 @@ header {
   background-color : #9cd37d;
   color : white;
 }
-header section {
+header .main {
   height : 100%;
   display : flex;
   justify-content : space-between;
@@ -75,37 +81,33 @@ header section {
 }
 
 /* sort button and container */
-#sort-container {
+.sort-container {
   display : flex;
   justify-content : flex-end;
   align-items : center;
 }
-#sort-container label {
+.sort-container label {
   margin-left : .5rem;
 }
-#sort-container button {
+.sort-container button {
   background-image: linear-gradient(#599b35, #70bf44);
   color : white;
 }
-#sort-container button.reverse {
+.sort-container button.reverse {
   background-image: linear-gradient(#70bf44, #599b35);
 }
-/*
-#c8e6b6 lighter
-#9cd37d light
-#70bf44 orig
-#599b35 dark
-*/
+
 
 
 
 /* - - - - - - - - - - - - - - */
 /* to do list */
-section[role="main"] {
+.main[role="main"] {
   margin-top : 10vh;
+  margin-bottom : 12vh;
 }
-#todo-container {
-  max-height : 70vh;
+.todo-container {
+  height : 78vh;
   padding : 1rem 0;
   box-sizing : border-box;
   overflow-y : scroll;
@@ -170,7 +172,7 @@ form {
   left : 0;
   bottom : 0;
   right : 0;
-  /* height : 20vh; */
+  height : 12vh;
   background-color : #f5f5f5;
   border-top : 2px solid grey;
   padding: 1rem 0;
@@ -181,7 +183,8 @@ form {
   display : flex;
   flex-direction : row;
   justify-content : space-between;
-  align-items : flex-end;
+  align-items : center; /* flex-end */
+  height : 100%;
 }
 .fieldset > div:nth-child(1) {
   flex : 5;
@@ -193,7 +196,7 @@ form {
 
 
 
-
+/* label (hidden to save space) */
 form input,
 form label {
   display: block;
@@ -207,7 +210,8 @@ form label {
 }
 
 /* text field and submit button */
-form input {
+.text,
+.submit {
   font-family: 'Signika', Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
   width: 100%;
@@ -217,9 +221,9 @@ form input {
   border-radius: 0.25rem;
   border : 1px solid grey;
 }
-form input[type="text"]:focus,
-form input[type="text"]:active {
-  border: 1px solid #e74e42;
+.text:focus,
+.text:active {
+  border: 2px solid #e74e42;
 }
 
 
@@ -242,23 +246,6 @@ form input[type="submit"]:focus {
 }
 
 
-
-
-
-/* mid to large screen stuff */
-@media only screen and (min-width: 600px) {
-
-  /* section,
-  #sort-container,
-  #todo-container,
-  form {
-    max-width: 80%;
-    margin: 0 auto 2rem;
-  }
-  #sort-container {
-    margin-bottom : 1rem;
-  } */
-}
   
 
   
