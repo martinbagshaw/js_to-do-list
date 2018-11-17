@@ -95,8 +95,45 @@
       update(newState);
       aToz.classList.toggle('reverse');
     });
-  
 
+
+    // function to handle mobile stuff:
+    // - handle header and footer compression - on text input focus
+    
+    // 1 - if under a certain size, get header and form height on load
+    // 2 - on text input focus, set this height, rather than auto resizing with vh
+    // 3 - on text input unfocus, remove this height and default to vh
+
+    // compare diff in height before and after
+    // - pass this in to text input focus function
+    (function() {
+      if (window.innerWidth <= 600) {
+        const header = document.getElementsByTagName('header')[0];
+        const textInput = document.querySelector('.text');
+        const height = {};
+  
+        // 1 - run on load
+        const getHeight = () => {
+          height.header = header.offsetHeight;
+          height.footer = Number(addTodoForm.offsetHeight); 
+        };
+        getHeight();
+  
+        // 2 - pass heights in on form focus
+        textInput.addEventListener('focus', () => {
+          header.style.height = `${height.header}px`;
+          addTodoForm.style.height = `${height.footer}px`;
+        });
+  
+        // 3 - default css on blur
+        textInput.addEventListener('blur', () => {
+          header.style.height = '';
+          addTodoForm.style.height = '';
+        });
+      }
+    })();
+    
+    
 
 
     // you should not need to change this function
