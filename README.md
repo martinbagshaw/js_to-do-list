@@ -15,10 +15,12 @@
     - vh sizing compresses header and footer when mobile keyboard is displayed
     - this does not take into account short screens, where vh units will give a shorter header and footer
     - could perhaps just use css, e.g.
-    ```header {
+    ```
+    header {
         min-height : 53px;
         height : 10vh;
-    }```
+    }
+    ```
 - ~~always keep address bar visible (lost when scrolled to bottom of page).~~
     - This behaviour would be a bit weird and unexpected, so left out
 
