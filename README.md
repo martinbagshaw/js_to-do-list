@@ -18,7 +18,8 @@
 - Use a database to store information in, rather than localStorage
 - Practically, there is no real reason to use a database, as localStorage is good for up to 10mb. In real terms:
     - Database good if this were extended to take uploads such as images and videos
-    - Database good if I want to steal everyone's personal details
+    - Database good if I want to steal everyone's personal details  
+
     ![evil](https://media3.giphy.com/media/BZlNhp9L5WINi/giphy.gif?cid=3640f6095bf00b1a7733325477f5ec68)
     - Database good if I want to learn how to implemement a database, and have a server on which I can use node
 - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), and [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) may be the best way of retrieving information from a database. [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker) may be a good way to cache data.
